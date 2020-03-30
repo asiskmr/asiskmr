@@ -1,0 +1,15 @@
+package com.yashtech.dao;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.yashtech.model.Course;
+
+public interface CourseRepository extends CrudRepository<Course, String>{
+
+	public List<Course> findByName(String name);	
+	public List<Course> findByDescription(String description);
+	
+	public List<Course> findByTopicId(String topicId);	
+}
